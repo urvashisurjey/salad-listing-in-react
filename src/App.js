@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Login from './components/Login/Login'
+import Header from './components/Header/Header'
+import SaladMenu from './components/SaladMenu/SaladMenu'
+import AllSalads from './components/AllSalads/AllSalads'
+import { Route } from 'react-router-dom';
+import Routes from './routes'
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  constructor(){
+    super();
+    this.state={
+      appName: "Banana",
+      home: false
+    }
+  }
+
+  render() {
+    return (
+      <>
+<AllSalads/>    
+<Routes/>      
+</>
+    );
+  }
 }
 
 export default App;

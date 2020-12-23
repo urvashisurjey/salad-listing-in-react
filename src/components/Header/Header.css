@@ -1,0 +1,34 @@
+.nav-item{
+    padding:1vw;
+    margin-left: 2vw;
+    display:inline-block;
+  }
+  
+  .fa-icons{
+   margin-top:2vh;
+    margin-left: 2vh;
+    display:inline-block;
+
+  }
+  
+  ul{
+  list-style-type: none;
+  float: right;
+  margin-top: 3vh;
+  margin-right:2vw;
+  }
+  
+  a{
+    color: rgb(8, 3, 27);
+    font-size: 1vw;
+    text-decoration:none
+  }
+  .image-design{
+  
+  width: 15vw;
+  height: 10vh;
+  float: left;
+  }
+  .navbar{
+    background-color: whitesmoke;
+  }
