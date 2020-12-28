@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import 'font-awesome/css/font-awesome.min.css';
-import {Link} from 'react-router-dom';
+import {Link,Router} from 'react-router-dom';
 import SaladMenu from '../../components/SaladMenu/SaladMenu'
 const Header = () => {
     return (
@@ -12,22 +12,25 @@ const Header = () => {
 
     <ul className="navbar-nav mr-auto">
       <li className="nav-item">
-        <a href={'/home'} className="nav-link" >Home</a>
+       <Link to='/home' className="nav-link" >Home</Link>
       </li>
       <li className="nav-item">
-        <a href={'/login'} className="nav-link">Menu</a>
+        <Link to='/comingsoon' className="nav-link">Menu</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" >Delivery</a>
+        <Link to='/comingsoon' className="nav-link" >Delivery</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link">About</a>
+        <Link to='/comingsoon' className="nav-link">About</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" >Reviews</a>
+        <Link to='/comingsoon' className="nav-link" >Reviews</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link">Contact</a>
+        <Link to='/comingsoon' className="nav-link">Contact</Link>
+      </li>
+      <li className="fa-icons">
+        <a className="nav-link" ><i className="fa fa-cart-plus"></i></a>
       </li>
       <li className="fa-icons">
         <a className="nav-link" ><i className="fa fa-heart-o"></i></a>

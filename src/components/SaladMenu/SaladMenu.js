@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import './SaladMenu.css'
 const SaladMenu = () => {
     return (
@@ -10,19 +11,19 @@ const SaladMenu = () => {
     <div className="collapse navbar-collapse" id="navbarCollapse">
     <ul className="navbar-nav mr-auto">
         <li className="nav-item " >
-        <a href={'/login'} className="nav-link ">All salads</a>
+        <Link to='/allsalads' className="nav-link ">All salads</Link>
         </li>
         <li className="nav-item">
-        <a href={'/'} className="nav-link" >Pasta</a>
+        <Link to='/comingsoon' className="nav-link" >Pasta</Link>
         </li>
         <li className="nav-item">
-        <a href={'/home'} className="nav-link" >Seafood</a>
+        <Link to='/comingsoon' className="nav-link" >Seafood</Link>
         </li>
         <li className="nav-item">
-        <a href={'/home'} className="nav-link" >Vegetables</a>
+        <Link to='/comingsoon' className="nav-link" >Vegetables</Link>
         </li>
         <li className="nav-item">
-        <a href={'/home'} className="nav-link" >Classic</a>
+        <Link to='/comingsoon' className="nav-link" >Classic</Link>
         </li>
 
 

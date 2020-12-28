@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import { PostData } from '../../services/PostData';
-
+import './Login.css'
 
 class Login extends Component{
     constructor(props){

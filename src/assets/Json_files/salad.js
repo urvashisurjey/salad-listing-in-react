@@ -1,6 +1,4 @@
-var data={
-  "salads": [
-    {
+export const data=[    {
       "id": "1",
       "title": "Salmon Avocado Salad",
       "image": "https://www.themealdb.com/images/media/meals/1549542994.jpg",
@@ -1693,7 +1691,7 @@ var data={
       "serving": "400g"
     },
     {
-      "id": "27",
+      "id": "28",
       "title": "Beet Salad With Peppers and Lettuce",
       "image": "https://spoonacular.com/recipeImages/634792-312x231.jpg",
       "price": 33.36,
@@ -1758,7 +1756,7 @@ var data={
       "serving": "400g"
     },
     {
-      "id": "28",
+      "id": "29",
       "title": "Crab Salad Stuffed Pita Pockets",
       "image": "https://spoonacular.com/recipeImages/640318-312x231.jpg",
       "price": 34.08,
@@ -1823,5 +1821,4 @@ var data={
       "serving": "400g"
     }
   ]
-};
-module.exports=data
+

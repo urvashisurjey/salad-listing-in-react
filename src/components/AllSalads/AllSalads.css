@@ -11,3 +11,41 @@
       /* align-items: start; */
     }
   }
+  section{
+    padding-top:100px;
+  }
+  .item{
+    display:block-inline;
+  }
+  .item h2{
+    margin-left:9vw;
+    float:left;
+    font-weight: bold;
+  
+  }
+  .item label{
+    float:left;
+    margin-left:69vw;
+  
+  }
+  .item select{
+    float:right;
+    margin-right:2vw;
+    margin-top:1vh;
+    height:5vh;
+    width:13vw;
+    /* background-color: #c8e9ca; */
+    border:0px;
+    outline: none!important;
+  
+  }
+  *:focus {
+    outline: none;
+  }
+  
+  #sortby{
+    border-radius: 20vw;
+    text-align: center;
+    color:rgba(53, 112, 160, 0.945);
+    font-weight: bold;
+  }
