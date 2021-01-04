@@ -6,13 +6,14 @@ import SaladMenu from '../../components/SaladMenu/SaladMenu'
 const Header = () => {
     return (
         <>
+        
 <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 <div className="collapse navbar-collapse" id="navbarCollapse">
     <img  src={require('../../assets/images/salad-logo.png').default} className="image-design" alt='background-img'/>
 
     <ul className="navbar-nav mr-auto">
       <li className="nav-item">
-       <Link to='/home' className="nav-link" >Home</Link>
+      <Link to='/saladmenu' className="nav-link" >Home</Link>
       </li>
       <li className="nav-item">
         <Link to='/comingsoon' className="nav-link">Menu</Link>

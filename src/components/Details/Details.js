@@ -1,66 +1,55 @@
-import React from 'react'
+import React,{Component} from 'react'
 import './Details.css';
-import {data} from '../../assets/Json_files/salad'
+import {getSaladData} from '../../services/PostData';
 import { useParams } from 'react-router-dom';
 import Header from '../Header/Header';
 import history from '../../history';
 import { withRouter } from "react-router-dom";
 
-function Details() {
+class Details extends Component {
 
-    let { saladid } = useParams();
-    let selecteditem = data.findIndex(
-        (obj) => obj.id == saladid);
-    let select_item_array = data[selecteditem];
-   
+    constructor(props){
+    super(props);
+    this.state={
+        selectItemArray:{},
+        details:[]
+    };
+    this.getSaladDataById=this.getSaladDataById.bind(this);
+    this.getSaladDataById();
+    
+    }
+
+    getSaladDataById(){
+    let saladid = this.props.match.params.saladid;
+    getSaladData().then((result)=>{
+        this.setState({details:result})
+        var selectedItem = this.state.details.findIndex(
+            (obj) => obj.id == saladid);
+        this.setState({selectItemArray:this.state.details[selectedItem]
+            })
+        })
+}    
+
+render(){
     return (
         
-            <div className='card'>
-                <div className="card-image">
-                    <img src={select_item_array.image}></img>
-                </div>
-                <div className="card-content">
-                    <h1>{select_item_array.title}</h1>
-                    <p>{select_item_array.summary}</p>
-                    <h1>${select_item_array.price} &nbsp;<small>{select_item_array.serving}/per savings</small></h1>
-                    <h4>Consist:</h4>
-                    <p>{select_item_array.ingredients.join(",")}</p>
-                    <h4>Nutrients:</h4>
-                    {/* <div class="table-responsive table-striped table-borderless">
-                        <table class="table table-hover">
-                            <thead class="heading">
-                                <tr>
-                                    <th>Ttile</th>
-                                    <th>Amount</th>
-                                    <th>Unit</th>
-                                    <th>Percentage of Daily needs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div> */}
-                </div>
+        <div className='card'>
+            <div className="card-image">
+                <img src={this.state.selectItemArray.image}></img>
             </div>
-        
+            <div className="card-content">
+                <h1>{this.state.selectItemArray.title}</h1>
+                <p>{this.state.selectItemArray.summary}</p>
+                <h1>${this.state.selectItemArray.price} &nbsp;<small>{this.state.selectItemArray.serving}/per savings</small></h1>
+                <h4>Consist:</h4>
+                <p>{this.state.selectItemArray.ingredients}</p>
+            </div>
+        </div>
+    
 
-    );
+);
 }
-// function renderTableData(props) {
-//     return props.map((props, index) => {
-//        const { title, amount, unit, percentOfDailyNeeds } = props
-//        return (
-//         <tr key={index}>
-//         <td>{item.title}</td>
-//         <td>{item.amount}</td>
-//         <td>
-//             {item.unit}
-//         </td>
-//         <td>{item.percentOfDailyNeeds}</td>
+   
+}
 
-//     </tr>
-//        )
-//     })
-//  }
 export default withRouter(Details);

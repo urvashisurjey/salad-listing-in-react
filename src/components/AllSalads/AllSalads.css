@@ -1,3 +1,4 @@
+
 .cardlist {
     width: 90vw;
     max-width: 1170px;
@@ -18,14 +19,15 @@
     display:block-inline;
   }
   .item h2{
-    margin-left:9vw;
+    margin-left:0vw;
     float:left;
     font-weight: bold;
   
   }
   .item label{
     float:left;
-    margin-left:69vw;
+    margin-left:80vw;
+    margin-top:2vh;
   
   }
   .item select{
@@ -45,7 +47,6 @@
   
   #sortby{
     border-radius: 20vw;
-    text-align: center;
     color:rgba(53, 112, 160, 0.945);
     font-weight: bold;
   }

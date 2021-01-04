@@ -21,3 +21,18 @@
     border-radius:50%;
     text-align:center;
   }
+  #priceButton{
+    background-color: crimson;
+    color: white;
+    border:none;
+    padding:2vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:1vw;
+    cursor: pointer;
+  border-radius: 60%;
+  outline:none;
+  font-weight: bold;
+  margin-left:0px;
+  }

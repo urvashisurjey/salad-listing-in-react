@@ -16,10 +16,8 @@ class Login extends Component{
     }
 
 login(){
-    console.log("adfdf");
 
     PostData().then((result) => {
-console.log('result'+result)
     })
 }
 

@@ -4,6 +4,7 @@ import './SaladMenu.css'
 const SaladMenu = () => {
     return (
         <>
+      
         <div className="menu" > 
 <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top" >
     <h1>Salads Menu</h1>

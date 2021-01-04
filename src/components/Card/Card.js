@@ -8,19 +8,20 @@ class Card extends Component{
 constructor(props){
     super(props);
 this.clickHandler = this.clickHandler.bind(this);
+
 }
  clickHandler=()=> {
   
   this.props.history.push(`/details/${this.props.id}`);
 
  };
-
 render(){
  return (
      <>
   <article
    className='card' onClick={this.clickHandler}
   >
+ <button id="priceButton">${this.props.price}</button>
    <img src={this.props.image} alt='' />
    <h1>{this.props.title}</h1>
    <p>{this.props.ingredients.join(",")}</p>
